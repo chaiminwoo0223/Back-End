@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/common.css" />
+  <script type="text/javascript" src="/common.js"></script>
+  <style>
+    a.btn { float: right; margin-top: -40px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>교수목록</h1>
+  <a href="create" class="btn">교수등록</a>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>이름</th>
+        <th>학과</th>
+        <th>전화</th>
+        <th>이메일</th>
+        <th>강의실</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="pr : ${ professors }" 
+          th:href="${ 'edit?id=' + pr.id }"
+          onclick="onClickHref(event)">
+        <td th:text="${ pr.id }"></td>
+        <td th:text="${ pr.name }"></td>
+        <td th:text="${ pr.departmentName }"></td>
+        <td th:text="${ pr.phone }"></td>
+        <td th:text="${ pr.email }"></td>
+        <td th:text="${ pr.office }"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
