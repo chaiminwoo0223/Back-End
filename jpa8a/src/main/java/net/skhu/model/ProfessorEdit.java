@@ -26,5 +26,4 @@ public class ProfessorEdit {
     String office;
 
     int departmentId;
-
 }
