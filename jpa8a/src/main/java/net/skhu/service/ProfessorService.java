@@ -10,7 +10,6 @@ import net.skhu.entity.Professor;
 import net.skhu.model.ProfessorEdit;
 import net.skhu.repository.ProfessorRepository;
 
-
 @Service
 public class ProfessorService {
 	@Autowired
