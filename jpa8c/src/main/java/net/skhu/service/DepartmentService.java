@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import net.skhu.entity.Department;
 import net.skhu.repository.DepartmentRepository;
 
-
 @Service
 public class DepartmentService {
 
