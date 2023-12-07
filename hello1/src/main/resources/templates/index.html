@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="kr" xmlns:th="http://www.tyymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>hello world</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+  <p th:text="${msg}">기본 메시지</p>
+  <p th:text="${#dates.format(now, 'yyyy-MM-dd HH:mm:ss')}">기본 날짜</p>
+</body>
+</html>
